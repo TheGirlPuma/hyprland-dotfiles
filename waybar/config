@@ -6,22 +6,6 @@
     "custom/launcher": {
         "format": "󰣇 ",
         "tooltip": "Apps öffnen",
-        "on-click": "wofi --show drun --normal-window"
-    },
-
-    "custom/cheatsheet": {
-        "format": " ❔ ",
-        "tooltip": "Cheatsheet",
-        "on-click": "kitty sh -c 'glow ~/.config/hypr/cheatsheet.md | less -R'"
-    },
-
-    "custom/power": {
-        "format": " ⏻ ",
-        "tooltip": "Power Menu",
-        "on-click": "wofi --show drun --conf ~/.config/wofi/power.conf"
-    },
-
-    "clock": {
-        "format": "{:%H:%M}"
+        "on-click": "wofi --show drun --style ~/.config/wofi/style.css"
     }
 }
