@@ -1,0 +1,23 @@
+{
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/cheatsheet", "custom/power", "battery"],
+
+    "hyprland/workspaces": { "format": "{icon}" },
+
+    "custom/cheatsheet": {
+        "format": " ❔ ",
+        "tooltip": "Hyprland Cheatsheet",
+        "on-click": "kitty sh -c 'glow ~/.config/hypr/cheatsheet.md | less -R'"
+    },
+
+    "custom/power": {
+        "format": " ⏻ ",
+        "tooltip": "Power Menu",
+        "on-click": "wofi --show drun -m -p 'Power Menu' --conf ~/.config/wofi/power_menu.conf || wofi --show drun"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}"
+    }
+}
