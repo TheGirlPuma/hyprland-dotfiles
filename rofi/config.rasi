@@ -1,0 +1,45 @@
+configuration {
+    show-icons: true;
+    display-drun: " ";
+    drun-display-format: "{name}";
+    font: "sans-serif 11";
+    terminal: "kitty";
+}
+
+* {
+    background-color: rgba(30, 25, 45, 0.95);
+    text-color: #e0b0ff;
+    border-color: #c67bff;
+}
+
+window {
+    border: 3px;
+    border-radius: 16px;
+    width: 900px;
+    height: 600px;
+}
+
+mainbox {
+    padding: 20px;
+}
+
+inputbar {
+    padding: 12px;
+    border-radius: 12px;
+    background-color: rgba(50, 40, 70, 0.9);
+}
+
+listview {
+    lines: 6;
+    columns: 4;
+    spacing: 15px;
+}
+
+element {
+    padding: 12px;
+    border-radius: 12px;
+}
+
+element selected {
+    background-color: rgba(198, 123, 255, 0.4);
+}

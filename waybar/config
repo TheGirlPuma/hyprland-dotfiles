@@ -6,6 +6,6 @@
     "custom/launcher": {
         "format": "󰣇 ",
         "tooltip": "Apps öffnen",
-        "on-click": "wofi --show drun --style ~/.config/wofi/style.css"
+        "on-click": "rofi -show drun -config ~/.config/rofi/config.rasi"
     }
 }
