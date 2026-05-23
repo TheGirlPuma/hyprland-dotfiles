@@ -1,12 +1,9 @@
-# 🚀 Hyprland Cheatsheet - TheGirlPuma
+# 🚀 Hyprland Cheatsheet
 
-**Super = Windows-Taste**
-
-**Wichtig:**
-- Super + D          → App-Menü
-- Super + Q          → Fenster schließen
-- Super + Linksklick → Fenster verschieben
-- Super + Rechtsklick→ Fenstergröße ändern
-- Super + Shift + E  → Hyprland beenden
-- ❔                 → Dieses Cheatsheet
-- ⏻                 → Power Menu (Logout, Shutdown)
+Super + D          → App Menü
+Super + Q          → Fenster schließen
+Super + Linksklick → Fenster verschieben
+Super + Rechtsklick→ Größe ändern
+Super + Shift + E  → Beenden
+❔                  → Dieses Cheatsheet
+⏻                  → Power Menu
