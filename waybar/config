@@ -4,8 +4,28 @@
     "modules-right": ["custom/cheatsheet", "custom/power", "battery"],
 
     "custom/launcher": {
-        "format": "󰣇 ",
+        "format": " 󰣇  ",
         "tooltip": "Apps öffnen",
-        "on-click": "rofi -show drun -config ~/.config/rofi/config.rasi"
+        "on-click": "rofi -show drun"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}"
+    },
+
+    "custom/cheatsheet": {
+        "format": " ❔ ",
+        "tooltip": "Cheatsheet",
+        "on-click": "kitty sh -c 'glow ~/.config/hypr/cheatsheet.md | less -R'"
+    },
+
+    "custom/power": {
+        "format": " ⏻ ",
+        "tooltip": "Power Menu",
+        "on-click": "~/.config/hypr/power_menu.sh"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}"
     }
 }
