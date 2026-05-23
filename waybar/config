@@ -1,7 +1,13 @@
 {
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["custom/launcher", "hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["custom/cheatsheet", "custom/power", "battery"],
+
+    "custom/launcher": {
+        "format": "󰣇 ",
+        "tooltip": "App-Menü öffnen",
+        "on-click": "wofi --show drun --normal-window"
+    },
 
     "hyprland/workspaces": {
         "format": "{icon}"
@@ -15,7 +21,7 @@
 
     "custom/power": {
         "format": " ⏻ ",
-        "tooltip": "Logout / Power Menu",
+        "tooltip": "Power Menu",
         "on-click": "wofi --show drun -p 'Power'"
     },
 
