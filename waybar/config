@@ -4,13 +4,9 @@
     "modules-right": ["custom/cheatsheet", "custom/power", "battery"],
 
     "custom/launcher": {
-        "format": " 󰣇  ",
-        "tooltip": "Apps öffnen",
-        "on-click": "rofi -show drun"
-    },
-
-    "hyprland/workspaces": {
-        "format": "{icon}"
+        "format": "󰣇 ",
+        "tooltip": "Apps öffnen (Super + D)",
+        "on-click": "fuzzel"
     },
 
     "custom/cheatsheet": {
