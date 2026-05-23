@@ -1,20 +1,28 @@
 {
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/cheatsheet", "custom/power", "battery"],
+    "modules-right": ["custom/launcher", "custom/cheatsheet", "custom/power", "battery"],
 
-    "hyprland/workspaces": { "format": "{icon}" },
+    "hyprland/workspaces": {
+        "format": "{icon}"
+    },
+
+    "custom/launcher": {
+        "format": "󰀻",
+        "tooltip": "App-Menü (9-Punkte)",
+        "on-click": "wofi --show drun --normal-window"
+    },
 
     "custom/cheatsheet": {
         "format": " ❔ ",
-        "tooltip": "Hyprland Cheatsheet",
+        "tooltip": "Cheatsheet",
         "on-click": "kitty sh -c 'glow ~/.config/hypr/cheatsheet.md | less -R'"
     },
 
     "custom/power": {
         "format": " ⏻ ",
         "tooltip": "Power Menu",
-        "on-click": "wofi --show drun -m -p 'Power Menu' --conf ~/.config/wofi/power_menu.conf || wofi --show drun"
+        "on-click": "~/.config/hypr/power-menu.sh"
     },
 
     "clock": {
