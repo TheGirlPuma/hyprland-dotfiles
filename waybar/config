@@ -5,12 +5,8 @@
 
     "custom/launcher": {
         "format": "󰣇 ",
-        "tooltip": "App-Menü öffnen",
+        "tooltip": "Apps öffnen",
         "on-click": "wofi --show drun --normal-window"
-    },
-
-    "hyprland/workspaces": {
-        "format": "{icon}"
     },
 
     "custom/cheatsheet": {
@@ -22,7 +18,7 @@
     "custom/power": {
         "format": " ⏻ ",
         "tooltip": "Power Menu",
-        "on-click": "wofi --show drun -p 'Power'"
+        "on-click": "wofi --show drun --conf ~/.config/wofi/power.conf"
     },
 
     "clock": {
