@@ -18,16 +18,16 @@ if [[ -n "$pid" && "$pid" != "null" ]]; then
     exit 0
 fi
 
-kitty --class "$NOTE_CLASS" \
+kitty --hold --class "$NOTE_CLASS" \
     --title "Shortcuts" \
     -o initial_window_width="$NOTE_W" \
     -o initial_window_height="$NOTE_H" \
     -o font_size=11 \
     -o window_padding_width=16 \
-    -o shell=/bin/sh \
     -o shell_integration=disabled \
+    -o cursor_shape=no \
     -o hide_window_decorations=no \
-    /bin/sh -c "cat '$NOTE_FILE'; exec sleep infinity" &
+    cat "$NOTE_FILE" &
 
 # Position nach dem Start setzen (oben rechts, nicht mittig)
 (
