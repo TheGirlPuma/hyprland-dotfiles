@@ -1,0 +1,21 @@
+Super+D · Apps öffnen
+Super+Return · Terminal
+Super+E · Dateimanager
+Super+Q · Fenster schließen
+Super+V · Schweben lassen
+Super+M · Hyprland beenden
+Super+1-9 · Desktop aufrufen
+Super+Shift+1-9 · Fenster verschieben
+Super+←/→ · Desktop wechseln
+Strg+Super+D · Neuer Desktop
+Strg+Super+F4 · Desktop schließen
+Strg+Super+←/→ · Desktop (Monitor)
+Super+Shift+M · Desktop → anderer Monitor
+Super+Shift+Alt+← · Desktop → links
+Super+Shift+Alt+→ · Desktop → rechts
+Super+, · Minimiert ein/aus
+Super+Shift+, · Fenster minimieren
+Super+Maus · Fenster bewegen
+Super+Rechtsklick · Fenster skalieren
+Super+S · Screenshot (Bereich)
+Druck · Screenshot (Auswahl)

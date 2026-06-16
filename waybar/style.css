@@ -1,0 +1,117 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Montserrat";
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+window#waybar {
+    background: rgba(12, 12, 22, 0.75);
+    border-bottom: 2px solid rgba(203, 166, 247, 0.7);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Launcher */
+#custom-launcher {
+    font-size: 24px;
+    padding: 0 16px;
+    color: #cba6f7;
+    background: rgba(203, 166, 247, 0.15);
+    border-radius: 12px;
+    margin: 4px 8px;
+}
+
+#custom-launcher:hover {
+    background: rgba(203, 166, 247, 0.35);
+    color: #f5c2e7;
+}
+
+/* Audio Modul */
+#pulseaudio {
+    color: #89b4fa;
+    padding: 4px 14px;
+}
+
+#pulseaudio:hover {
+    background: rgba(137, 180, 250, 0.25);
+    color: #cba6f7;
+}
+
+/* Allgemeine Module */
+#workspaces,
+#window,
+#clock,
+#custom-media,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#bluetooth,
+#tray,
+#custom-power {
+    padding: 4px 14px;
+    margin: 4px 3px;
+    border-radius: 10px;
+    color: #cdd6f4;
+}
+
+/* Hover */
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#battery:hover,
+#bluetooth:hover,
+#custom-media:hover,
+#custom-power:hover {
+    background: rgba(203, 166, 247, 0.18);
+}
+
+/* Kurz-Hilfe */
+#custom-help {
+    font-size: 14px;
+    color: #6c7086;
+    padding: 2px 10px;
+    margin: 4px 3px;
+    border-radius: 8px;
+    opacity: 0.75;
+}
+
+#custom-help:hover {
+    opacity: 1;
+    color: #a6adc8;
+}
+
+/* Neuer Desktop (+) */
+#custom-new-workspace {
+    font-size: 18px;
+    font-weight: 700;
+    color: #cba6f7;
+    padding: 2px 12px;
+    margin: 4px 3px;
+    border-radius: 10px;
+    background: rgba(203, 166, 247, 0.12);
+}
+
+#custom-new-workspace:hover {
+    background: rgba(203, 166, 247, 0.35);
+    color: #f5c2e7;
+}
+
+/* Workspaces */
+#workspaces button.active {
+    background: rgba(203, 166, 247, 0.3);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#workspaces button:hover {
+    background: rgba(203, 166, 247, 0.12);
+}
+
+/* Uhr & Media */
+#clock { font-size: 14.8px; font-weight: 600; }
+#custom-media { color: #a6b0d0; }
+
+/* Power */
+#custom-power { font-size: 17px; }

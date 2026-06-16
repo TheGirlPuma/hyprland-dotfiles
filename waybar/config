@@ -1,27 +1,129 @@
 {
-    "modules-left": ["custom/launcher", "hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["custom/cheatsheet", "custom/power", "battery"],
+    "@import": "mocha.css",
+
+    "output": ["DP-1", "HDMI-A-1"],
+    "layer": "top",
+    "position": "top",
+    "height": 50,
+
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/new-workspace", "hyprland/window", "hyprland/window#hdmi"],
+    "modules-center": ["clock", "custom/media", "clock#hdmi"],
+    "modules-right": ["custom/help", "pulseaudio", "network", "cpu", "memory", "battery", "bluetooth", "tray", "custom/power"],
 
     "custom/launcher": {
-        "format": "󰣇 ",
+        "output": ["DP-1"],
+        "format": "󰀻",
         "tooltip": "Apps öffnen (Super + D)",
-        "on-click": "fuzzel"
+        "on-click": "rofi -show drun -theme ~/.config/rofi/spotlight-dark.rasi",
+        "on-click-right": "pkill rofi",
+        "class": "launcher"
     },
 
-    "custom/cheatsheet": {
-        "format": " ❔ ",
-        "tooltip": "Cheatsheet",
-        "on-click": "kitty sh -c 'glow ~/.config/hypr/cheatsheet.md | less -R'"
+    "hyprland/workspaces": {
+        "output": ["DP-1"],
+        "all-outputs": true,
+        "format": "{name}",
+        "sort-by": "number",
+        "persistent-workspaces": {
+            "*": 2
+        }
     },
 
-    "custom/power": {
-        "format": " ⏻ ",
-        "tooltip": "Power Menu",
-        "on-click": "~/.config/hypr/power_menu.sh"
+    "custom/new-workspace": {
+        "output": ["DP-1"],
+        "format": "+",
+        "tooltip": "Neuer Desktop (Strg+Super+D)",
+        "on-click": "hyprctl dispatch workspace empty"
+    },
+
+    "custom/help": {
+        "output": ["DP-1"],
+        "format": "󰘥",
+        "tooltip": "Shortcuts-Haftnotiz (Super+H)",
+        "on-click": "~/.config/hypr/scripts/shortcuts-help.sh"
+    },
+
+    "hyprland/window": {
+        "output": ["DP-1"],
+        "format": "  {}  ",
+        "max-length": 60
+    },
+
+    "hyprland/window#hdmi": {
+        "output": ["HDMI-A-1"],
+        "format": "  {}  ",
+        "max-length": 50
     },
 
     "clock": {
-        "format": "{:%H:%M}"
+        "output": ["DP-1"],
+        "format": "{:%H:%M}",
+        "interval": 60
+    },
+
+    "clock#hdmi": {
+        "output": ["HDMI-A-1"],
+        "format": "{:%H:%M}",
+        "interval": 60
+    },
+
+    "custom/media": {
+        "output": ["DP-1"],
+        "exec": "playerctl metadata --format '{{artist}} - {{title}}' 2>/dev/null || echo 'No media'",
+        "format": "  {}",
+        "max-length": 40,
+        "on-click": "playerctl play-pause"
+    },
+
+    "pulseaudio": {
+        "output": ["DP-1"],
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": ["", "", ""],
+        "tooltip-format": "{desc}",
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "class": "audio"
+    },
+
+    "network": {
+        "output": ["DP-1"],
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤭"
+    },
+
+    "cpu": {
+        "output": ["DP-1"],
+        "format": " {usage}%"
+    },
+
+    "memory": {
+        "output": ["DP-1"],
+        "format": " {percentage}%"
+    },
+
+    "battery": {
+        "output": ["DP-1"],
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "bluetooth": {
+        "output": ["DP-1"],
+        "format": "",
+        "format-connected": ""
+    },
+
+    "tray": {
+        "output": ["DP-1"],
+        "spacing": 10,
+        "icon-size": 18
+    },
+
+    "custom/power": {
+        "output": ["DP-1"],
+        "format": "⏻",
+        "on-click": "wlogout"
     }
 }

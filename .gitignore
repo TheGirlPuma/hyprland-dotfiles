@@ -1,0 +1,10 @@
+# Cache & temporäre Dateien
+.cache
+rofi/cache
+*.log
+waybar/*.json
+hyprpaper.log
+
+*~
+.DS_Store
+Thumbs.db
