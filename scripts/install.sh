@@ -9,9 +9,25 @@ echo "Installing Hyprland dotfiles from $REPO ..."
 
 mkdir -p "$HOME/.config"
 
-ln -sfn "$REPO/hypr" "$HOME/.config/hypr"
-ln -sfn "$REPO/waybar" "$HOME/.config/waybar"
-ln -sfn "$REPO/rofi" "$HOME/.config/rofi"
+link_config() {
+    local name="$1"
+    local target="$REPO/$name"
+    local dest="$HOME/.config/$name"
+
+    if [[ -e "$dest" && ! -L "$dest" ]]; then
+        mv "$dest" "${dest}.bak.$(date +%s)"
+        echo "  Backed up existing ~/.config/$name"
+    elif [[ -L "$dest" ]]; then
+        rm -f "$dest"
+    fi
+
+    ln -sfn "$target" "$dest"
+    echo "  Linked ~/.config/$name -> $target"
+}
+
+link_config hypr
+link_config waybar
+link_config rofi
 
 chmod +x "$REPO/hypr/scripts"/*.sh
 
