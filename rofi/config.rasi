@@ -48,7 +48,7 @@ configuration {
 /*	combi-hide-mode-prefix: false;*/
 /*	combi-display-format: "{mode} {text}";*/
 /*	matching-negate-char: '-' /* unsupported */;*/
-	cache-dir: "/home/sabi/.config/rofi/cache/" ;
+	cache-dir: "~/.config/rofi/cache/" ;
 /*	window-thumbnail: false;*/
 /*	drun-use-desktop-cache: false;*/
 /*	drun-reload-desktop-cache: false;*/
@@ -149,7 +149,7 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "/home/sabi/.config/rofi/spotlight-dark.rasi"
+@theme "~/.config/rofi/spotlight-dark.rasi"
 //@theme "/usr/share/rofi/themes/rounded-nord-dark.rasi"
 //@theme "/usr/share/rofi/themes/spotlight-dark.rasi"
 listview {
